@@ -1,10 +1,14 @@
 # Classification, Regression and Clustering under Sensor Drift
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22820993.svg)](https://doi.org/10.5281/zenodo.22820993)
+
 A reproducible multi-task machine-learning benchmark for the UCI Gas Sensor Array Drift at Different Concentrations dataset.
 
-Dataset: UCI Machine Learning Repository dataset 270  
+Dataset: UCI Machine Learning Repository dataset 270 (Gas Sensor Array Drift at Different Concentrations)  
 DOI: 10.24432/C5MK6M  
 Source archive: https://archive.ics.uci.edu/static/public/270/gas%2Bsensor%2Barray%2Bdrift%2Bdataset%2Bat%2Bdifferent%2Bconcentrations.zip
+
+The raw UCI dataset is not redistributed in this repository by default; the reproducibility pipeline retrieves the canonical archive at run time and verifies it against the hashes recorded in `data/data_manifest.json`.
 
 ## Research Questions
 
@@ -60,7 +64,9 @@ py -3.11 -m venv .venv
 
 ## FULL Run
 
-Use the same commands with `--profile full`. This increases tuning iterations, bootstrap iterations, inference repeats, clustering sample size and permutation importance repeats.
+Use the same commands with `--profile full`. This increases tuning iterations, bootstrap iterations, inference repeats, clustering sample size and permutation importance repeats. `configs/experiment.yaml` defines both the QUICK and FULL profiles, and each run writes a generated experiment manifest (`results/experiment_manifest.json`) recording the source commit, package versions, profile parameters, and execution metadata used to produce that run.
+
+The QUICK profile is intended for development/smoke execution. The FULL profile is the configuration used to produce the results reported in the manuscript (see [Archival release](#archival-release) below for the exact experiment commit).
 
 ## Streamlit
 
@@ -79,3 +85,24 @@ Concentration ranges vary between gases, which affects interpretation of global 
 ## Versioning
 
 The repository is published at https://github.com/PesquisaDoug/gas-sensor-drift-ml-benchmark. No CI/CD, GitHub Actions, or cloud deployment are configured by this project.
+
+## Archival release
+
+Version: 1.0.0  
+Zenodo DOI: 10.5281/zenodo.22820993  
+DOI URL: https://doi.org/10.5281/zenodo.22820993  
+Repository: https://github.com/PesquisaDoug/gas-sensor-drift-ml-benchmark
+
+The FULL experimental outputs reported in the manuscript (`paper/manuscript.pdf`) were generated from commit `5ca408022aa5e44fa286116629553cd44d8e2788` (the experiment commit). This is distinct from, and not necessarily the same as, the later documentation/release commit that this repository's `main` branch may point to when the version 1.0.0 archive was created on Zenodo.
+
+## Citation
+
+If you use this benchmark, please cite the archived software:
+
+> Douglas Felipe de Lima Silva. Gas Sensor Drift ML Benchmark. Version 1.0.0. Zenodo, 2026. https://doi.org/10.5281/zenodo.22820993
+
+Machine-readable citation metadata are available in [`CITATION.cff`](CITATION.cff).
+
+## License
+
+Released under the [MIT License](LICENSE). The license applies to the code in this repository; it does not change the terms of the UCI dataset.
