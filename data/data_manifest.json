@@ -1,0 +1,81 @@
+{
+  "dataset_name": "Gas Sensor Array Drift at Different Concentrations",
+  "dataset_id": 270,
+  "uci_dataset_id": 270,
+  "doi": "10.24432/C5MK6M",
+  "canonical_source": "https://archive.ics.uci.edu/static/public/270/gas%2Bsensor%2Barray%2Bdrift%2Bdataset%2Bat%2Bdifferent%2Bconcentrations.zip",
+  "archive_file": "C:/Users/Douglas/Documents/0_LANCE/PROJETOS_PAPPERS/Projeto 3/data/raw/uci_gas_sensor_drift_270.zip",
+  "archive_sha256": "98fe3a30981a222dd4518fbcc3dddd45d5c0ce9b03ef6dc6fe5cf7a04cfbff5e",
+  "rows": 13910,
+  "features": 128,
+  "batches": 10,
+  "gas_mapping_original": {
+    "1": "Ethanol",
+    "2": "Ethylene",
+    "3": "Ammonia",
+    "4": "Acetaldehyde",
+    "5": "Acetone",
+    "6": "Toluene"
+  },
+  "gas_mapping_zero_based": {
+    "0": "Ethanol",
+    "1": "Ethylene",
+    "2": "Ammonia",
+    "3": "Acetaldehyde",
+    "4": "Acetone",
+    "5": "Toluene"
+  },
+  "source_batch_files": [
+    {
+      "name": "batch1.dat",
+      "sha256": "6b62f3e71b90f95dd9c2157fa91ffce32571faa7f474dd52f29a4ae769144625",
+      "rows": 445
+    },
+    {
+      "name": "batch2.dat",
+      "sha256": "4ea9490068457badf9efd0c22f359fbfce12c208cdd440526b97ac91d31b9002",
+      "rows": 1244
+    },
+    {
+      "name": "batch3.dat",
+      "sha256": "aabf06bf8b8200740156235dc59458e06d99aa8faba4d6764a22c6b6c2674ff4",
+      "rows": 1586
+    },
+    {
+      "name": "batch4.dat",
+      "sha256": "ffc87c5146001bbe8ce90c4b2f7dad5b390ca3079f51b559032df53ffe5ff0af",
+      "rows": 161
+    },
+    {
+      "name": "batch5.dat",
+      "sha256": "dcad4939c300a6c7d9f41b9470a9253eecc0ebc5c2c4e940d8ae20b8fc4240d0",
+      "rows": 197
+    },
+    {
+      "name": "batch6.dat",
+      "sha256": "297d3a8b594dee4e2f4d7d2c4f5c485939fa708c10b5a11ed5cce95e05049afb",
+      "rows": 2300
+    },
+    {
+      "name": "batch7.dat",
+      "sha256": "eb5801d38a59beaae4a2412195d8ded790175ed1611159e083649ee9fe03d150",
+      "rows": 3613
+    },
+    {
+      "name": "batch8.dat",
+      "sha256": "58146b3e2dd68b125b2d5432cdd4968ec1fff47464ceb04282382181932d49be",
+      "rows": 294
+    },
+    {
+      "name": "batch9.dat",
+      "sha256": "51f368ae8dee5d285be7f2029770e10eb12f342578830bc40ea852db19d19c9b",
+      "rows": 470
+    },
+    {
+      "name": "batch10.dat",
+      "sha256": "b8309e8ff205b9d0350761989809f31f8feaefb8582aecb05f1d0f694b91184e",
+      "rows": 3600
+    }
+  ],
+  "validated_at_utc": "2026-09-17T02:28:31.581691+00:00"
+}
