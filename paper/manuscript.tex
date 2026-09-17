@@ -10,6 +10,12 @@
 \usepackage{array}
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Classification, Regression, and Clustering under Sensor Drift: A Reproducible Machine Learning Benchmark},
+  pdfauthor={Douglas Felipe de Lima Silva},
+  pdfsubject={Reproducible machine learning benchmark for gas sensor drift},
+  pdfkeywords={gas sensor drift, machine learning, classification, regression, clustering, temporal generalization, distribution shift, reproducibility}
+}
 
 \graphicspath{{../figures/}}
 
@@ -389,7 +395,7 @@ This paper presents a reproducible benchmark for gas-sensor drift analysis, eval
 The dataset analyzed in this study is publicly available from the UCI Machine Learning Repository as Gas Sensor Array Drift at Different Concentrations, dataset ID 270, DOI: 10.24432/C5MK6M \cite{uci_gas_270}. Raw dataset files are not vendored in the accompanying source-code repository. Instead, the reproducibility pipeline retrieves the canonical UCI archive and verifies its integrity using the archive and per-batch hashes recorded in \texttt{data/data\_manifest.json}.
 
 \section{Code Availability}
-The source code, configuration files, tests, and scripts required to reproduce the analyses reported in this study are publicly available at \url{https://github.com/PesquisaDoug/gas-sensor-drift-ml-benchmark}. The results reported in this manuscript correspond to commit \texttt{5ca408022aa5e44fa286116629553cd44d8e2788}, using the FULL experimental profile defined in \texttt{configs/experiment.yaml}. The generated experiment manifest records the source commit, package versions, profile parameters, and execution metadata. Detailed instructions for reproducing the QUICK and FULL workflows are provided in the repository README.
+The source code, configuration files, tests, and scripts required to reproduce the analyses reported in this study are publicly available at \url{https://github.com/PesquisaDoug/gas-sensor-drift-ml-benchmark}. The FULL experimental results reported in this manuscript were generated from commit \texttt{5ca408022aa5e44fa286116629553cd44d8e2788}, using the experimental profile defined in \texttt{configs/experiment.yaml}. The software is archived as version 1.0.0 on Zenodo at DOI: 10.5281/zenodo.22820993 \cite{delimasilva2026software}. The generated experiment manifest records the experiment commit, package versions, profile parameters, and execution metadata. Detailed instructions for reproducing the QUICK and FULL workflows are provided in the repository README.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}
