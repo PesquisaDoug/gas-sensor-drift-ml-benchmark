@@ -1,0 +1,103 @@
+classification:
+  Dummy:
+    estimator: DummyClassifier
+    params:
+      strategy: prior
+      random_state: 42
+  RandomForest:
+    estimator: RandomForestClassifier
+    params:
+      random_state: 42
+      n_jobs: -1
+    search:
+      n_estimators: [200, 400, 600]
+      max_depth: [null, 12, 24]
+      min_samples_leaf: [1, 2, 4]
+      max_features: [sqrt, log2]
+  XGBoost:
+    estimator: XGBClassifier
+    params:
+      random_state: 42
+      eval_metric: mlogloss
+      tree_method: hist
+      n_jobs: -1
+    search:
+      n_estimators: [200, 400, 600]
+      max_depth: [3, 5, 7]
+      learning_rate: [0.03, 0.08, 0.15]
+      subsample: [0.75, 1.0]
+      colsample_bytree: [0.75, 1.0]
+  SVM:
+    estimator: Pipeline(StandardScaler,SVC)
+    params:
+      model__probability: true
+      model__random_state: 42
+    search:
+      model__C: loguniform(1e-2,1e2)
+      model__gamma: [scale, auto]
+      model__kernel: [rbf, linear]
+  MLP:
+    estimator: Pipeline(StandardScaler,MLPClassifier)
+    params:
+      model__random_state: 42
+      model__early_stopping: true
+      model__max_iter: 400
+    search:
+      model__hidden_layer_sizes:
+        - [64]
+        - [128]
+        - [128, 64]
+      model__activation: [relu, tanh]
+      model__alpha: loguniform(1e-5,1e-2)
+      model__learning_rate_init: loguniform(1e-4,1e-2)
+
+regression:
+  Dummy:
+    estimator: DummyRegressor
+    params:
+      strategy: median
+  RandomForest:
+    estimator: RandomForestRegressor
+    params:
+      random_state: 42
+      n_jobs: -1
+    search:
+      n_estimators: [200, 400, 600]
+      max_depth: [null, 12, 24]
+      min_samples_leaf: [1, 2, 4]
+      max_features: [sqrt, 0.7, 1.0]
+  XGBoost:
+    estimator: XGBRegressor
+    params:
+      random_state: 42
+      objective: reg:squarederror
+      tree_method: hist
+      n_jobs: -1
+    search:
+      n_estimators: [200, 400, 600]
+      max_depth: [3, 5, 7]
+      learning_rate: [0.03, 0.08, 0.15]
+      subsample: [0.75, 1.0]
+      colsample_bytree: [0.75, 1.0]
+  SVR:
+    estimator: Pipeline(StandardScaler,SVR)
+    params: {}
+    search:
+      model__C: loguniform(1e-2,1e3)
+      model__epsilon: [0.1, 1.0, 5.0, 10.0]
+      model__gamma: [scale, auto]
+      model__kernel: [rbf]
+  MLP:
+    estimator: Pipeline(StandardScaler,MLPRegressor)
+    params:
+      model__random_state: 42
+      model__early_stopping: true
+      model__max_iter: 500
+    search:
+      model__hidden_layer_sizes:
+        - [64]
+        - [128]
+        - [128, 64]
+      model__activation: [relu, tanh]
+      model__alpha: loguniform(1e-5,1e-2)
+      model__learning_rate_init: loguniform(1e-4,1e-2)

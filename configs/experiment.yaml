@@ -1,0 +1,55 @@
+random_seed: 42
+
+dataset:
+  id: 270
+  name: Gas Sensor Array Drift at Different Concentrations
+  doi: 10.24432/C5MK6M
+  url: https://archive.ics.uci.edu/static/public/270/gas%2Bsensor%2Barray%2Bdrift%2Bdataset%2Bat%2Bdifferent%2Bconcentrations.zip
+  archive_path: data/raw/uci_gas_sensor_drift_270.zip
+  extract_dir: data/raw/uci_gas_sensor_drift_270
+  expected_rows: 13910
+  expected_features: 128
+  expected_batches: 10
+
+protocols:
+  random:
+    test_size: 0.20
+    stratify: gas_class
+    random_state: 42
+  temporal:
+    train_batches:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+    test_batches:
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+
+cross_validation:
+  tuning_folds: 3
+
+resources:
+  search_n_jobs: 1
+
+profiles:
+  quick:
+    tuning_iterations: 3
+    bootstrap_iterations: 250
+    inference_repeats: 10
+    cluster_sample_size: 5000
+    silhouette_sample_size: 2000
+    importance_sample_size: 2000
+    importance_repeats: 5
+  full:
+    tuning_iterations: 8
+    bootstrap_iterations: 1000
+    inference_repeats: 30
+    cluster_sample_size: 10000
+    silhouette_sample_size: 2000
+    importance_sample_size: 5000
+    importance_repeats: 15
