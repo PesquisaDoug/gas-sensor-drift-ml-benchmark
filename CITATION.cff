@@ -1,10 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 title: "Gas Sensor Drift ML Benchmark"
-version: 0.1.0
-date-released: 2026-09-16
+version: 1.0.0
+date-released: 2026-09-17
+doi: "10.5281/zenodo.22820993"
 type: software
-repository-code: ""
+repository-code: "https://github.com/PesquisaDoug/gas-sensor-drift-ml-benchmark"
+license: MIT
 authors:
   - family-names: "de Lima Silva"
     given-names: "Douglas Felipe"
