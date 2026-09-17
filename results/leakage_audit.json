@@ -1,0 +1,31 @@
+{
+  "feature_count": 128,
+  "feature_columns_valid": true,
+  "excluded_metadata": [
+    "batch",
+    "concentration_ppmv",
+    "gas",
+    "gas_class",
+    "gas_class_original"
+  ],
+  "features_containing_targets_or_metadata": [],
+  "random_overlap_n": 0,
+  "temporal_train_batches": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "temporal_test_batches": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "temporal_train_batches_match_expected": true,
+  "temporal_test_batches_match_expected": true,
+  "temporal_batch_overlap_n": 0,
+  "duplicate_rows": 0
+}

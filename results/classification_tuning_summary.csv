@@ -1,0 +1,11 @@
+protocol,model,best_cv_macro_f1,best_params
+random,Dummy,,{}
+random,RandomForest,0.9927500855935865,"{""n_estimators"": 200, ""min_samples_leaf"": 2, ""max_features"": ""log2"", ""max_depth"": 24}"
+random,XGBoost,0.9936919295559618,"{""subsample"": 1.0, ""n_estimators"": 600, ""max_depth"": 3, ""learning_rate"": 0.08, ""colsample_bytree"": 1.0}"
+random,SVM,0.9909539291898062,"{""model__C"": 8.471801418819979, ""model__gamma"": ""scale"", ""model__kernel"": ""rbf""}"
+random,MLP,0.9911335811482233,"{""model__activation"": ""relu"", ""model__alpha"": 0.0024526126311336773, ""model__hidden_layer_sizes"": [128, 64], ""model__learning_rate_init"": 0.0029106359131330704}"
+temporal,Dummy,,{}
+temporal,RandomForest,0.797894818614365,"{""n_estimators"": 200, ""min_samples_leaf"": 2, ""max_features"": ""log2"", ""max_depth"": 24}"
+temporal,XGBoost,0.7449149539193612,"{""subsample"": 0.75, ""n_estimators"": 200, ""max_depth"": 7, ""learning_rate"": 0.08, ""colsample_bytree"": 0.75}"
+temporal,SVM,0.9323841150817755,"{""model__C"": 21.368329072358772, ""model__gamma"": ""auto"", ""model__kernel"": ""linear""}"
+temporal,MLP,0.9373986888224882,"{""model__activation"": ""tanh"", ""model__alpha"": 0.0008967376801947961, ""model__hidden_layer_sizes"": [64], ""model__learning_rate_init"": 0.008706020878304856}"

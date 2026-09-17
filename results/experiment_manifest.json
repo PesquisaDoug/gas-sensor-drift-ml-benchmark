@@ -1,0 +1,174 @@
+{
+  "experiment_name": "gas_sensor_drift_multitask_benchmark",
+  "dataset": {
+    "dataset_name": "Gas Sensor Array Drift at Different Concentrations",
+    "dataset_id": 270,
+    "uci_dataset_id": 270,
+    "doi": "10.24432/C5MK6M",
+    "canonical_source": "https://archive.ics.uci.edu/static/public/270/gas%2Bsensor%2Barray%2Bdrift%2Bdataset%2Bat%2Bdifferent%2Bconcentrations.zip",
+    "archive_file": "C:/Users/Douglas/Documents/0_LANCE/PROJETOS_PAPPERS/Projeto 3/data/raw/uci_gas_sensor_drift_270.zip",
+    "archive_sha256": "98fe3a30981a222dd4518fbcc3dddd45d5c0ce9b03ef6dc6fe5cf7a04cfbff5e",
+    "rows": 13910,
+    "features": 128,
+    "batches": 10,
+    "gas_mapping_original": {
+      "1": "Ethanol",
+      "2": "Ethylene",
+      "3": "Ammonia",
+      "4": "Acetaldehyde",
+      "5": "Acetone",
+      "6": "Toluene"
+    },
+    "gas_mapping_zero_based": {
+      "0": "Ethanol",
+      "1": "Ethylene",
+      "2": "Ammonia",
+      "3": "Acetaldehyde",
+      "4": "Acetone",
+      "5": "Toluene"
+    },
+    "source_batch_files": [
+      {
+        "name": "batch1.dat",
+        "sha256": "6b62f3e71b90f95dd9c2157fa91ffce32571faa7f474dd52f29a4ae769144625",
+        "rows": 445
+      },
+      {
+        "name": "batch2.dat",
+        "sha256": "4ea9490068457badf9efd0c22f359fbfce12c208cdd440526b97ac91d31b9002",
+        "rows": 1244
+      },
+      {
+        "name": "batch3.dat",
+        "sha256": "aabf06bf8b8200740156235dc59458e06d99aa8faba4d6764a22c6b6c2674ff4",
+        "rows": 1586
+      },
+      {
+        "name": "batch4.dat",
+        "sha256": "ffc87c5146001bbe8ce90c4b2f7dad5b390ca3079f51b559032df53ffe5ff0af",
+        "rows": 161
+      },
+      {
+        "name": "batch5.dat",
+        "sha256": "dcad4939c300a6c7d9f41b9470a9253eecc0ebc5c2c4e940d8ae20b8fc4240d0",
+        "rows": 197
+      },
+      {
+        "name": "batch6.dat",
+        "sha256": "297d3a8b594dee4e2f4d7d2c4f5c485939fa708c10b5a11ed5cce95e05049afb",
+        "rows": 2300
+      },
+      {
+        "name": "batch7.dat",
+        "sha256": "eb5801d38a59beaae4a2412195d8ded790175ed1611159e083649ee9fe03d150",
+        "rows": 3613
+      },
+      {
+        "name": "batch8.dat",
+        "sha256": "58146b3e2dd68b125b2d5432cdd4968ec1fff47464ceb04282382181932d49be",
+        "rows": 294
+      },
+      {
+        "name": "batch9.dat",
+        "sha256": "51f368ae8dee5d285be7f2029770e10eb12f342578830bc40ea852db19d19c9b",
+        "rows": 470
+      },
+      {
+        "name": "batch10.dat",
+        "sha256": "b8309e8ff205b9d0350761989809f31f8feaefb8582aecb05f1d0f694b91184e",
+        "rows": 3600
+      }
+    ],
+    "validated_at_utc": "2026-09-17T02:28:31.581691+00:00"
+  },
+  "seed": 42,
+  "profile": "full",
+  "random_test_size": 0.2,
+  "temporal_train_batches": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "temporal_test_batches": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "tuning_iterations": 8,
+  "tuning_cv_folds": 3,
+  "bootstrap_iterations": 1000,
+  "cluster_sample_size": 10000,
+  "silhouette_sample_size": 2000,
+  "importance_sample_size": 5000,
+  "importance_repeats": 15,
+  "best_demo_classifier": "XGBoost",
+  "best_demo_regressor": "RandomForest",
+  "best_temporal_classifier_by_training_cv": "MLP",
+  "best_temporal_regressor_by_training_cv": "SVR",
+  "selected_dbscan": {
+    "n_clusters": 4,
+    "noise_fraction": 0.0372,
+    "non_noise_n": 9628,
+    "silhouette": 0.498142996708056,
+    "davies_bouldin": 0.5791006002514633,
+    "calinski_harabasz": 458.3954407895621,
+    "ari_gas": -0.004217876492941,
+    "nmi_gas": 0.0286233154679975,
+    "ari_batch": 0.0036381419417354,
+    "nmi_batch": 0.0447712736752058,
+    "algorithm": "DBSCAN",
+    "configuration": "eps=4.466200,min_samples=20",
+    "eps": 4.466200308470605,
+    "eps_quantile": 0.95,
+    "min_samples": 20
+  },
+  "pca_components_95_variance": 11,
+  "git_commit": null,
+  "packages": {
+    "python": "3.12.0",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scipy": "1.18.1",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "joblib": "1.6.0",
+    "requests": "2.34.2"
+  },
+  "completed_at_utc": "2026-09-17T02:31:10.626459+00:00",
+  "leakage_audit": {
+    "feature_count": 128,
+    "feature_columns_valid": true,
+    "excluded_metadata": [
+      "batch",
+      "concentration_ppmv",
+      "gas",
+      "gas_class",
+      "gas_class_original"
+    ],
+    "features_containing_targets_or_metadata": [],
+    "random_overlap_n": 0,
+    "temporal_train_batches": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "temporal_test_batches": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "temporal_train_batches_match_expected": true,
+    "temporal_test_batches_match_expected": true,
+    "temporal_batch_overlap_n": 0,
+    "duplicate_rows": 0
+  }
+}

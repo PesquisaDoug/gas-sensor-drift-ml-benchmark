@@ -1,0 +1,14 @@
+{
+  "title": "Classification, Regression, and Clustering under Sensor Drift: A Reproducible Machine Learning Benchmark",
+  "dataset": "UCI Gas Sensor Array Drift at Different Concentrations",
+  "doi": "10.24432/C5MK6M",
+  "main_results": {
+    "classification": "results/classification_metrics.csv",
+    "regression": "results/regression_metrics.csv",
+    "classification_drift": "results/classification_drift_comparison.csv",
+    "regression_drift": "results/regression_drift_comparison.csv",
+    "bootstrap": "results/bootstrap_ci.csv",
+    "clustering": "results/clustering_metrics.csv"
+  },
+  "figures_directory": "figures/"
+}

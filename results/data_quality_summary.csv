@@ -1,0 +1,9 @@
+,value
+rows,13910.0
+features,128.0
+missing_feature_cells,0.0
+duplicate_rows,0.0
+gas_classes,6.0
+batches,10.0
+min_concentration_ppmv,1.0
+max_concentration_ppmv,1000.0
