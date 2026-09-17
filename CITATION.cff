@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Gas Sensor Drift ML Benchmark"
+version: 0.1.0
+date-released: 2026-09-16
+type: software
+repository-code: ""
+authors:
+  - family-names: "de Lima Silva"
+    given-names: "Douglas Felipe"
+    orcid: "https://orcid.org/0009-0007-9868-4891"
+references:
+  - type: dataset
+    title: "Gas Sensor Array Drift at Different Concentrations"
+    doi: "10.24432/C5MK6M"
+    publisher: "UCI Machine Learning Repository"
